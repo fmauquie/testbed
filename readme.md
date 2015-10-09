@@ -17,3 +17,5 @@ This is a quick hack.
 
 There is no build system and I copied the libs in the repo (beuark).
 Also the structure and lib versions look a little old because I started from some stuff I made somewhere else some time ago.
+
+Test it: https://fmauquie.github.io/testbed/app/
