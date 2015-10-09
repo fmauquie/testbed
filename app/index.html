@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-strict-di>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test Bed</title>
+
+    <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="vendors/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="app.css" rel="stylesheet"/>
+    <link href="features/home/home.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-fluid fullscreen">
+    <ng-view class="fullscreen"></ng-view>
+</div>
+
+<!-- vendors -->
+<script src="vendors/angular/angular.min.js" type="text/javascript"></script>
+<script src="vendors/angular/angular-route.min.js" type="text/javascript"></script>
+<script src="vendors/angular/angular-resource.min.js" type="text/javascript"></script>
+<script src="vendors/angular/angular-messages.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="vendors/ace-builds/src-min-noconflict/ace.js"></script>
+<script type="text/javascript" src="vendors/ui-ace/ui-ace.min.js"></script>
+<script type="text/javascript" src="vendors/jsdiff/diff.min.js"></script>
+
+<!-- Scripts -->
+<script src="features/app.js" type="text/javascript"></script>
+<script src="features/home/home.js" type="text/javascript"></script>
+
+</body>
+</html>

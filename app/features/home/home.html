@@ -1,0 +1,46 @@
+<form class="row testbed" ng-controller="HomeController as home" ng-submit="home.tryIt()">
+    <div class="col-md-6 testbed">
+        <div class="form-group testbed">
+            <label for="code">Code</label>
+
+            <div id="code"
+                 ui-ace="home.aceConfig"
+                 class="form-control"
+                 ng-model="home.test.code"
+                 ng-model-options="{debounce: 500}"></div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label for="expected">Expected Result</label>
+
+                    <textarea id="expected"
+                              class="form-control code"
+                              ng-model="home.test.expected"
+                              ng-model-options="{debounce: 500}"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <fieldset class="col-xs-12" ng-if="home.result.valid !== null">
+                <div class="form-group">
+                    <label>Result
+                        <span class="label label-danger" ng-if="!home.evaluating && !home.result.valid">fail</span>
+                        <span class="label label-success" ng-if="!home.evaluating && home.result.valid">success</span>
+                        <span class="label label-default" ng-if="home.evaluating">
+                            <i class="fa fa-spinner fa-spin"></i>
+                        </span>
+                    </label>
+
+                    <p class="form-control-static">
+                        <code ng-bind="home.result.output" ng-if="!home.result.html"></code>
+                        <code ng-bind-html="home.result.output" ng-if="home.result.html"></code>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <iframe evaluator="home.evaluator" src="evaluator/evaluator.html"></iframe>
+</form>

@@ -1,0 +1,41 @@
+[evaluator] {
+    height: 0;
+    border: none;
+}
+
+.code {
+    font-family: monospace;
+    font-size: 12px;
+}
+
+code {
+    display: block;
+}
+
+.testbed {
+    height: 100%;
+}
+
+.ace_editor {
+    height: 100%;
+}
+
+.error_placeholder {
+    border-bottom: 1px dashed red;
+    position: absolute;
+    pointer-events: auto;
+}
+
+.correct {
+    color: #000000;
+    background-color: lightgreen;
+}
+
+.incorrect {
+    color: #000000;
+    background-color: #cd5c5c;
+}
+
+.removed {
+    text-decoration: line-through;
+}
