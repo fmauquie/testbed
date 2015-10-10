@@ -1,6 +1,10 @@
 {
   "name": "testbed",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmauquie/testbed.git"
+  },
   "dependencies": {
     "body-parser": "^1.6.2",
     "express": "^4.8.2",
