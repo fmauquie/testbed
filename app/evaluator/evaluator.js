@@ -6,6 +6,9 @@
         window.testConsole[name] = function () {
             console[name].apply(console, arguments);
             this.out += Array.prototype.slice.call(arguments).map(function (value) {
+                if (typeof value === 'undefined') {
+                    return 'undefined';
+                }
                 if (typeof value === 'function') {
                     return 'function';
                 }
